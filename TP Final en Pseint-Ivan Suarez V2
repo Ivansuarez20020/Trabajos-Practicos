@@ -1,0 +1,282 @@
+SubProceso Reloj
+
+  //Pantalla de carga
+	
+	Escribir ("Calculando Resultado...");
+	
+	Esperar 1 Segundo;
+	Limpiar Pantalla;
+	Escribir ("Calculando Resultado...");
+	Escribir ("---------qqqqqqqqqqq----------");
+	Escribir ("---------q         q----------");
+	Escribir ("----------q-------q-----------");
+	Escribir ("-----------q-----q------------");
+	Escribir ("------------q - q-------------");
+	Escribir ("------------q - q-------------");
+	Escribir ("-----------q  -  q------------");
+	Escribir ("----------q   -   q-----------");
+	Escribir ("---------q    -    q----------");
+	Escribir ("---------qqqqqqqqqqq----------");
+	
+	Esperar 1 Segundo;
+	Limpiar Pantalla;
+	Escribir ("Calculando Resultado...");
+	Escribir ("---------qqqqqqqqqqq----------");
+	Escribir ("---------q         q----------");
+	Escribir ("----------q       q-----------");
+	Escribir ("-----------q-----q------------");
+	Escribir ("------------q - q-------------");
+	Escribir ("------------q - q-------------");
+	Escribir ("-----------q  -  q------------");
+	Escribir ("----------q   -   q-----------");
+	Escribir ("---------q---------q----------");
+	Escribir ("---------qqqqqqqqqqq----------");
+	
+	Esperar 1 Segundo;
+	Limpiar Pantalla;
+	Escribir ("Calculando Resultado...");
+	Escribir ("---------qqqqqqqqqqq----------");
+	Escribir ("---------q         q----------");
+	Escribir ("----------q       q-----------");
+	Escribir ("-----------q     q------------");
+	Escribir ("------------q - q-------------");
+	Escribir ("------------q - q-------------");
+	Escribir ("-----------q  -  q------------");
+	Escribir ("----------q-------q-----------");
+	Escribir ("---------q---------q----------");
+	Escribir ("---------qqqqqqqqqqq----------");
+	
+	Esperar 1 Segundo;
+	Limpiar Pantalla;
+	Escribir ("Calculando Resultado...");
+	Escribir ("---------qqqqqqqqqqq----------");
+	Escribir ("---------q         q----------");
+	Escribir ("----------q       q-----------");
+	Escribir ("-----------q     q------------");
+	Escribir ("------------q   q-------------");
+	Escribir ("------------q   q-------------");
+	Escribir ("-----------q-----q------------");
+	Escribir ("----------q-------q-----------");
+	Escribir ("---------q---------q----------");
+	Escribir ("---------qqqqqqqqqqq----------");
+	
+	Esperar 1 Segundo;
+	Limpiar Pantalla;
+	
+	//Fin de pantalla de carga
+	
+FinSubProceso
+
+Proceso Calculadora
+	
+	//Definiciones
+	
+	Definir OP como Real;
+	
+	Definir Val_1 Como real;
+	Definir Val_2 Como Real;
+	
+	Definir Val_3 Como Real;
+	Definir Val_4 Como Real;
+	
+	Definir Val_5 Como Real;
+	Definir Val_6 Como Real;
+	
+	Definir Val_7 Como Real;
+	Definir Val_8 Como Real;
+	
+	
+	Definir Res_1 Como Real;
+	Definir Res_2 Como Real;
+	Definir Res_3 Como Real;
+    Definir Res_4 Como Real;	
+	
+	//Inicio del menu
+	
+	Repetir
+		
+		Limpiar Pantalla;
+		
+		Escribir ("Bienvenido a `La Super Calculadora 2.0` ");
+		Escribir ("Coloque una opcion (1-5)");
+		Escribir ("1. Suma");
+		Escribir ("2. Resta");
+		Escribir ("3. Multiplicacion");
+		Escribir ("4. Division");
+		Escribir ("5. Salir");
+		Leer OP;
+		
+		//Calculos
+		
+		Segun OP Hacer
+			1:
+				//Suma
+				
+				Limpiar Pantalla;
+				
+				Escribir ("Coloque un numero para sumarlo");
+				Leer Val_1;
+				
+				si Val_1 <= 0 Entonces repetir
+						
+						Escribir ("ERROR! Numero menor a 0, coloque otro numero.");
+						Leer Val_1;
+						
+					Hasta Que Val_1 > 0;
+				FinSi
+				
+				Escribir ("Coloque otro numero para sumarlo.");
+				Leer Val_2;
+				
+				Si Val_2 <= 0 Entonces Repetir
+						
+					Hasta Que Val_2 > 0; 
+				FinSi
+				
+				Res_1 <- Val_1 + Val_2;
+				
+				
+				
+				
+				Limpiar Pantalla;
+				
+				Reloj;
+				
+				Escribir ("Su resultado es "), Res_1;
+				
+				Esperar 3 segundos;
+				
+				
+				
+			2:
+				//Resta
+				
+				Limpiar Pantalla;
+				
+				Escribir ("Coloque un numero para restarlo. (mayor a 0)");
+				Leer Val_3;
+				
+				Si Val_3 <= 0 Entonces Repetir
+						
+						Escribir ("ERROR! Valor colocado menor a 0, coloque otro.");
+						Leer Val_3;
+						
+					Hasta Que Val_3 > 0; 
+				FinSi
+				
+				Escribir ("Coloque otro numero para restarlo. (Mayor a 0)");
+				Leer Val_4;
+				
+				Si Val_4 <= 0 Entonces Repetir
+						
+						Escribir ("ERROR! Valor colocado menor a 0, coloque otro.");
+						Leer Val_4;
+						
+					Hasta Que Val_4 > 0;
+				FinSi
+				
+				Res_2 <- Val_3 - Val_4;
+				
+				Limpiar Pantalla;
+				
+				Reloj;
+				
+				Escribir ("Su resultado es "), Res_2;
+				
+				Esperar 3 segundos;
+				
+				
+			3:
+				//Multiplicacion
+				
+				Limpiar Pantalla;
+				
+				Escribir ("Coloque un numero que quiera Multiplicar. (Mayor a 0)");
+				Leer Val_5;
+				
+				Si Val_5 <= 0 Entonces Repetir
+						
+						Escribir ("ERROR! Numero colocado menor a 0, coloque otro.");
+						Leer Val_5;
+						
+					Hasta Que Val_5 > 0 ;
+				FinSi
+				
+				Escribir ("Coloque un numero para Multiplicarlo. (Mayor a 0)");
+				Leer Val_6;
+				
+				Si Val_6 <= 0 Entonces Repetir
+						
+						Escribir ("ERROR! Valor colocado menor a 0, coloque otro.");
+						Leer Val_6;
+						
+					Hasta Que Val_6 > 0 ;
+				FinSi
+				
+				Res_3 <- Val_5 * Val_6;
+				
+				Limpiar Pantalla;
+				
+				Reloj;
+				
+				Escribir ("su resultado es "), Res_3;
+				
+				Esperar 3 segundos;
+				
+			4:	
+				//Division
+				
+				Limpiar Pantalla;
+				
+				Escribir ("Coloque el numero que quiera dividir.");
+				Leer Val_7;
+				
+				Si Val_7 <= 0 Entonces Repetir
+						
+						Escribir ("ERROR! valor colocado menor a 0, coloque otro numero. (Mayor a 0)");
+						Leer Val_7;
+						
+					Hasta Que Val_7 > 0;
+				FinSi
+				
+				Escribir ("Coloque otro numero por el que dividir el anterior. (mayor a 0)");
+				Leer Val_8;
+				
+				Si Val_8 <= 0 Entonces Repetir
+						
+						Escribir ("EEROR! Valor colocado menor a 0, coloque otro numero.");
+						Leer Val_8;
+						
+					Hasta Que Val_8 > 0 ; 
+				FinSi
+				
+				Res_4 <- Val_7 / Val_8;
+				
+				Limpiar Pantalla;
+				
+				Reloj;
+				
+				Escribir ("Su resultado es "), Res_4;
+				Esperar 3 segundos;
+				
+				
+			5:	
+				//Salir
+				
+				Limpiar Pantalla;
+				
+				Escribir ("Para salir coloque una tecla cualquiera.");
+				Esperar Tecla;
+				Escribir ("Gracias, vuelva prontos.");
+				
+			De Otro Modo:
+				
+				Escribir ("ERROR! Opcion no valida.");
+				Leer OP;
+				
+		FinSegun
+		
+	Hasta Que OP = 5; 
+	
+	
+FinProceso
